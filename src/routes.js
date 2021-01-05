@@ -46,9 +46,7 @@ const routes = [
           {
             path: "",
             action: async ({ mystore }) => {
-              return await import("./Loader")
-                .then(({ default: Loader }) => <Loader />)
-                .then(() => runInAction(() => mystore.getProducts()))
+              return await runInAction(() => mystore.getProducts())
                 .then(() => import("./Products"))
                 .then(({ default: Products }) => <Products store={mystore} />);
             },
