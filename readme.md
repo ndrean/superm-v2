@@ -76,12 +76,15 @@ const store = {
 
 ## Universal Router
 
+Based on an object of routes that will be parsed. Not integrated within React (different from React Router)
+
 <https://github.com/kriasoft/universal-router/blob/master/docs/api.md>
 
 - Build a `routes`, array of objects `{path:"/", action:()=>{..}}`.
 - Use a listener on **history**
 - Use `history.push` for ajax on each `<a>` click,
 - For route resolving and rendering, `new UniversalRouter(routes).resolve` in **index.js**
+- pass the `store` to the `routes` so every path/action has access to
 
 Using the middleware `next` to pass `{children}` into a menu layout. This is done twice, for general menu, and for the general submenu (nested routes).
 
