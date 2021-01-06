@@ -1,5 +1,9 @@
 # Transcript of Final Project of React tutorial with Mobx, Universal Router, Stripe payment
 
+Project in tuto:
+
+<https://react-tutorial.app/app.html?id=1390>
+
 ## PWA
 
 <https://create-react-app.dev/docs/making-a-progressive-web-app/>
