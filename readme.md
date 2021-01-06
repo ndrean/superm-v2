@@ -8,11 +8,11 @@ Project in tuto:
 
 <https://create-react-app.dev/docs/making-a-progressive-web-app/>
 
-> Use template provided by CRA
+- Use template provided by CRA
 
 `npx create-react-app superm-v2 --template cra-template-pwa`
 
-> Add to **index.js**
+- Add to **index.js**
 
 ```js
 #index.js;
@@ -44,18 +44,24 @@ configure({
 
 ```js
 const store = {
-  // object for the "active-tab", cf Navlink with React Router
-  menu,
-  setMenu,
+  // the "active-tab", cf Navlink with React Router
+  menu: { nutrition: false, details: true,...},
+  setMenu: action( // using "action" from Mobx
+     (selection=> {for (const key in store.menu) {
+      if (key === selection) {....}),)
 
   // fetching the products
-  products,
-  getProducts,
-  findProductById,
+  products: [],
+  getProducts: async (fetch...),
+  findProductById: store.products.find(...),
 
   // the cart
-  cart,
-  initCart, // initialize the cart from localStorage in index.js
+  cart: [],
+  // initialize the cart from localStorage in index.js
+  initCart: action( // "action" from Mobx
+     () => {
+      const getFromLS = JSON.parse(localStorage.getItem("cart"));
+      ///}),
   getItems, // for Stripe
   cartToLS, // save to localStorage
   findProductInCart,
@@ -80,7 +86,7 @@ To be able to `import` two components, I made object with several components:
 
 ```js
 const ProductDetails = {
-  getDetail,
+  getDetail: fetch(...),
   Storage,
   Info,
   Nutrition,
