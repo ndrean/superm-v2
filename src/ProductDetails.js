@@ -71,7 +71,6 @@ const ProductDetails = {
       history.push({ pathname: e.target.pathname });
 
       const selection = e.target.pathname.match(/(\w+)$/)[0];
-      console.log(selection);
       store.setMenu(selection);
     });
 

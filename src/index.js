@@ -7,7 +7,7 @@ import { configure } from "mobx";
 import routes from "./routes.js";
 import store from "./store.js";
 import "./index.css";
-// import serviceWorker from "./service-worker";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 configure({
   enforceActions: "always",
@@ -43,4 +43,4 @@ history.push("/");
 action(() => store.initCart())();
 history.listen(({ location }) => renderRoute(location));
 renderRoute(history.location);
-// serviceWorker.register();
+serviceWorkerRegistration.register();
