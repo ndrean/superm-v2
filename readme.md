@@ -42,6 +42,8 @@ configure({
 
 - store:
 
+Object with attributes (`menu`, `products`, `card`) & methods. If a method modifies an attribute, then use `action` from **Mobx**
+
 ```js
 const store = {
   // the "active-tab", cf Navlink with React Router
@@ -75,6 +77,11 @@ const store = {
 ## Universal Router
 
 <https://github.com/kriasoft/universal-router/blob/master/docs/api.md>
+
+- Build a `routes`, array of objects `{path:"/", action:()=>{..}}`.
+- Use a listener on **history**
+- Use `history.push` for ajax on each `<a>` click,
+- For route resolving and rendering, `new UniversalRouter(routes).resolve` in **index.js**
 
 Using the middleware `next` to pass `{children}` into a menu layout. This is done twice, for general menu, and for the general submenu (nested routes).
 
