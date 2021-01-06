@@ -3,11 +3,13 @@
 ## PWA
 
 > Use template provided by CRA
-> `npx create-react-app superm-v2 --template cra-template-pwa`
+
+`npx create-react-app superm-v2 --template cra-template-pwa`
+
 > Add to **index.js**
 
 ```js
-// # index.js
+#index.js;
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 serviceWorkerRegistration.register();
 ```
@@ -16,7 +18,7 @@ serviceWorkerRegistration.register();
 
 `yarn add mobx mobx-react-lite`
 
-> configuration for debugging
+- configuration for debugging
 
 ```js
 // #index.js
@@ -30,7 +32,7 @@ configure({
 });
 ```
 
-> store:
+- store:
 
 ```js
 const store = {
@@ -61,6 +63,8 @@ const store = {
 Using the middleware `next` to pass `{children}` into a menu layout. This is done twice, for general menu, and for the general submenu (nested routes).
 
 ## Component **ProductDetails** with ".dot" notation
+
+To be able to `import` two components, I made object with several components:
 
 ```js
 const ProductDetails = {
