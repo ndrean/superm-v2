@@ -2,6 +2,8 @@
 
 ## PWA
 
+<https://create-react-app.dev/docs/making-a-progressive-web-app/>
+
 > Use template provided by CRA
 
 `npx create-react-app superm-v2 --template cra-template-pwa`
@@ -15,6 +17,8 @@ serviceWorkerRegistration.register();
 ```
 
 ## Mobx
+
+<https://mobx.js.org/react-integration.html>
 
 `yarn add mobx mobx-react-lite`
 
@@ -60,9 +64,13 @@ const store = {
 
 ## Universal Router
 
+<https://github.com/kriasoft/universal-router/blob/master/docs/api.md>
+
 Using the middleware `next` to pass `{children}` into a menu layout. This is done twice, for general menu, and for the general submenu (nested routes).
 
 ## Component **ProductDetails** with ".dot" notation
+
+<https://react-tutorial.app/app.html?id=1185>
 
 To be able to `import` two components, I made object with several components:
 
