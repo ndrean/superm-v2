@@ -1,20 +1,21 @@
 import { observable, action, runInAction } from "mobx";
 
 const store = observable({
-  // menu: {
-  //   nutrition: false,
-  //   storage: false,
-  //   info: true,
-  // },
-  // setMenu: action((selection) => {
-  //   for (const key in store.menu) {
-  //     if (key === selection) {
-  //       store.menu[key] = true;
-  //     } else {
-  //       store.menu[key] = false;
-  //     }
-  //   }
-  // }),
+  menu: {
+    nutrition: false,
+    details: true,
+    storage: false,
+    info: true,
+  },
+  setMenu: action((selection) => {
+    for (const key in store.menu) {
+      if (key === selection) {
+        store.menu[key] = true;
+      } else {
+        store.menu[key] = false;
+      }
+    }
+  }),
 
   products: [],
   getProducts: async () => {

@@ -3,7 +3,7 @@ import { action } from "mobx";
 import { observer } from "mobx-react-lite";
 import Button from "./Button";
 import history from "./history";
-// import clsx from "clsx";
+import clsx from "clsx";
 
 const ProductDetails = {
   getDetail: async (id) => {
@@ -70,15 +70,16 @@ const ProductDetails = {
       e.preventDefault();
       history.push({ pathname: e.target.pathname });
 
-      // const selection = e.target.pathname.match(/(\w+)$/)[0];
-      // newMenu = store.setMenu(selection);
+      const selection = e.target.pathname.match(/(\w+)$/)[0];
+      console.log(selection);
+      store.setMenu(selection);
     });
 
-    // React.useEffect(() => console.log(newMenu));
-
-    // const classDetail = clsx({ "tab-active": newMenu?.info });
-    // const classeNutrition = clsx({ "tab-active": newMenu?.nutrition });
-    // const classeStorage = clsx({ "tab-active": newMenu?.storage });
+    const classDetail = clsx({
+      "tab-active": store.menu.info || store.menu.details,
+    });
+    const classNutrition = clsx({ "tab-active": store.menu.nutrition });
+    const classStorage = clsx({ "tab-active": store.menu.storage });
 
     return (
       <div className="product-details-layout">
@@ -99,7 +100,7 @@ const ProductDetails = {
                 <a
                   href={`/products/${id}/details`}
                   onClick={handleNav}
-                  // className={classDetail}
+                  className={classDetail}
                 >
                   Details
                 </a>
@@ -108,7 +109,7 @@ const ProductDetails = {
                 <a
                   href={`/products/${id}/nutrition`}
                   onClick={handleNav}
-                  // className={classeNutrition}
+                  className={classNutrition}
                 >
                   Nutrition
                 </a>
@@ -117,7 +118,7 @@ const ProductDetails = {
                 <a
                   href={`/products/${id}/storage`}
                   onClick={handleNav}
-                  // className={classeStorage}
+                  className={classStorage}
                 >
                   Storage
                 </a>
