@@ -9,7 +9,7 @@ const Navbar = (props) => {
   const [isActive, setIsActive] = React.useState(true);
   const { store } = props;
 
-  React.useEffect(() => runInAction(() => store.cartToLS), [store.cart]);
+  React.useEffect(() => runInAction(() => store.cartToLS), [store, store.cart]);
 
   const handleNav = (e) => {
     e.preventDefault();

@@ -51,11 +51,8 @@ const store = observable({
   },
   initCart: action(() => {
     const getFromLS = JSON.parse(localStorage.getItem("cart"));
-    if (getFromLS) {
-      store.cart = getFromLS;
-    } else {
-      store.cart = [];
-    }
+    store.cart = getFromLS || [];
+    return store.cart;
   }),
   cartCount: () => {
     if (store.cart?.length > 0) {

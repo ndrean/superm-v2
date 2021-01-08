@@ -6,9 +6,11 @@ Project in tuto:
 
 ## Running build || Docker
 
-- analyse build bundle: run `yarn build` then `yarn analyze`
+> analyse build bundle: run `yarn build` then `yarn analyze`
 
-- Run build with `docker-compose up` (build the React app in a Node container, then run an Nginx container to serve the copied static built files). Alternatively, on host, run `yarn build`, install `http-server` and run `http-server ./build`.
+- Run build with `docker-compose up` (build the React app in a Node container, then run an Nginx container to serve the copied static built files).
+
+- Alternatively, on host, run `yarn build`, install `http-server` and run `http-server ./build`.
 
 ## PWA
 

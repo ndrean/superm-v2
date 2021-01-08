@@ -14,7 +14,7 @@ configure({
   computedRequiresReaction: true,
   reactionRequiresObservable: true,
   observableRequiresReaction: true,
-  disableErrorBoundaries: true,
+  disableErrorBoundaries: false,
 });
 
 const context = {
