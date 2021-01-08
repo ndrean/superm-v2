@@ -2,7 +2,8 @@ version: '3.8'
 
 services:
   react-app:
-    container_name: react-frontend
+    image: ndrean/react-app-superm:build-mobx-ur
+    container_name: react-app
     build:
       context: .
       dockerfile: Dockerfile
