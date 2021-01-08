@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import { action } from "mobx";
+import { action, runInAction } from "mobx";
 import history from "./history";
 import Button from "./Button.js";
 
@@ -9,6 +9,8 @@ const Product = (props) => {
 
   const productFromCart = store.findProductInCart(details.id);
   const quantity = productFromCart ? productFromCart.quantity : 0;
+
+  React.useEffect(() => runInAction(() => store.cartToLS), [store, store.cart]);
 
   const handleNav = action((e) => {
     e.preventDefault();

@@ -1,15 +1,13 @@
 import React from "react";
 import history from "./history";
 import { observer } from "mobx-react-lite";
-import { runInAction } from "mobx";
+// import { runInAction } from "mobx";
 import clsx from "clsx";
 import "./index.css";
 
 const Navbar = (props) => {
   const [isActive, setIsActive] = React.useState(true);
   const { store } = props;
-
-  React.useEffect(() => runInAction(() => store.cartToLS), [store, store.cart]);
 
   const handleNav = (e) => {
     e.preventDefault();

@@ -115,3 +115,9 @@ const ProductDetails = {
 - "Active link"
 
 With `store.setMenu(selection)` where I read "selection" from the pathname with a regex to set the class with `clsx`.
+
+## Saving to localStorage
+
+When the app is started with **index.js**, we read localStorage with the IFFE `action(() => store.initCart())()`
+
+The cart is saved to loalStorage in the **Product** component within a `useEffect` with `runInAction`.
