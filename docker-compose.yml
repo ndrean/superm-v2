@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  react-app:
+    container_name: react-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # build production with node and copy in nginx html folder
+    # volumes:
+    #   - .:/app
+    #   - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    ports:
+      - 8080:80

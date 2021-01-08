@@ -23,7 +23,7 @@ const Navbar = (props) => {
     <>
       <nav className="navbar">
         <a href="/" className="nav-brand" onClick={handleNav}>
-          Mobx/UniversalRouter
+          Mobx/Universal-Router
         </a>
         <ul>
           <li className="nav-item">

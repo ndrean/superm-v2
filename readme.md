@@ -49,14 +49,14 @@ const store = {
   // the "active-tab", cf Navlink with React Router
   menu: { nutrition: false, details: true,...},
   setMenu: action( // using "action" from Mobx
-     (selection=> {for (const key in store.menu) {
-      if (key === selection) {....}),)
-
+     (selection)=> {for (const key in store.menu) {
+      if (key === selection) {return ....}
+     }}
+   ),
   // fetching the products
   products: [],
   getProducts: async (fetch...),
   findProductById: store.products.find(...),
-
   // the cart
   cart: [],
   // initialize the cart from localStorage in index.js
