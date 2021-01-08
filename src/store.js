@@ -50,8 +50,12 @@ const store = observable({
     return 0;
   },
   initCart: action(() => {
-    const getFromLS = JSON.parse(localStorage.getItem("cart"));
-    store.cart = getFromLS || [];
+    try {
+      const getFromLS = JSON.parse(localStorage.getItem("cart"));
+      store.cart = getFromLS || [];
+    } catch (err) {
+      store.cart = [];
+    }
     return store.cart;
   }),
   cartCount: () => {
