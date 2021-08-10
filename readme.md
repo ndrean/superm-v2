@@ -1,8 +1,7 @@
 # Transcript of Final Project of React tutorial with Mobx, Universal Router, Stripe payment
 
-Project in tuto:
-
-<https://react-tutorial.app/app.html?id=1390>
+Tu visualize this project on Codesandbox, just insert "box" into the Github URL:
+<https://githubbox.com/ndrean/superm-v2>
 
 ## Running build || Docker
 
